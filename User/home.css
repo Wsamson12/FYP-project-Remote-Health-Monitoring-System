@@ -1,0 +1,10 @@
+.bgc {
+    background-image: url('../image/home-bgc.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h2{
+    text-align: center;
+}

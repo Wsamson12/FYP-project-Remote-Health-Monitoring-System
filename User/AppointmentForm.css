@@ -1,0 +1,95 @@
+/* Updated Modal (background) */
+#appointmentForm.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top, higher than the navbar */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+#appointmentForm {
+    border-radius: 5px;
+}
+
+
+/* Updated Modal Content */
+#appointmentForm .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: fit-content; /* Adjust width based on content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* The Close Button inside the modal */
+#appointmentForm .close {
+    color: #aaa;
+    align-self: flex-end;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#appointmentForm .close:hover,
+#appointmentForm .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#appointmentForm .form-field {
+    margin: 10px 0; /* Add some space between fields */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    width: 100%; /* Full width */
+}
+
+#appointmentForm .form-field label {
+    margin-bottom: 5px; /* Space between label and input */
+    text-align: left;
+}
+
+#appointmentForm .form-field input,
+#appointmentForm .form-field select {
+    padding: 10px; /* Padding inside the input/select */
+    border: 1px solid #ccc; /* Border around the input/select */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
+#appointmentForm .form-field input[type="text"]:disabled {
+    background-color: #e9e9e9; /* Light gray background for disabled fields */
+}
+
+
+
+#appointmentForm button {
+    flex-basis: 49%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+
+
+#submit{
+    padding: 10px;
+    background-color: gold;
+    margin-top: 10px;
+}
+
+#clear{
+    padding: 10px;
+    background-color: rgba(255, 0, 59, 0.79);
+    margin-top: 10px;
+}
+
