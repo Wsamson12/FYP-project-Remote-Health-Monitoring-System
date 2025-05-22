@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+
+<body>
+<script>
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+
+    script.addEventListener("load", function(event) {
+        const config = {
+            name: "",
+            meetingId: "fyp",
+            apiKey: "34d073b0-96b3-44df-8a26-7d2450faf7e3",
+
+            containerId: null,
+
+            micEnabled: true,
+            webcamEnabled: true,
+            participantCanToggleSelfWebcam: true,
+            participantCanToggleSelfMic: true,
+
+            chatEnabled: true,
+            raiseHandEnabled: true,
+            screenShareEnabled: true,
+            whiteboardEnabled: true,
+
+            joinScreen: {
+                visible: true,
+            },
+
+            recording: {
+                enabled: true,
+                webhookUrl: "https://www.videosdk.live/callback",
+                autoStart: false,
+                theme: "DARK", // DARK || LIGHT || DEFAULT
+
+                layout: {
+                    type: "SIDEBAR",
+                    priority: "PIN",
+                    gridSize: 3,
+                },
+            },
+
+            permissions: {
+                pin: true,
+                toggleRecording: true,
+                askToJoin: false,
+                toggleParticipantWebcam: false,
+                toggleParticipantMic: false,
+                toggleParticipantScreenshare: false,
+                removeParticipant: true,
+                endMeeting: true,
+                drawOnWhiteboard: true,
+                toggleWhiteboard: true,
+            },
+
+            leftScreen: {
+                rejoinButtonEnabled: true,
+            },
+        };
+
+        const meeting = new VideoSDKMeeting();
+        meeting.init(config);
+    });
+
+    script.src =
+        "https://sdk.videosdk.live/rtc-js-prebuilt/0.3.31/rtc-js-prebuilt.js";
+    document.getElementsByTagName("head")[0].appendChild(script);
+
+</script>
+</body>
+
+</html>
