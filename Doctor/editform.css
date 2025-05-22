@@ -1,0 +1,117 @@
+/* 背景变暗 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 100px;
+}
+
+/* 表单样式 */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 10px; /* 减少内部边距 */
+    border: 1px solid #888;
+    width: fit-content; /* 让表单根据内容自动调整大小 */
+    min-width: 300px; /* 可以设置一个最小宽度 */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.close-btn {
+    display: inline-block; /* 或者其他非 none 的值 */
+    visibility: visible;
+    opacity: 1;
+    color: SlateGray;
+    font-size: 14px; /* 或者根据需要设置的大小 */
+    cursor: pointer; /* 提示用户可以点击 */
+    float: right;
+    font-size: 30px;
+}
+
+
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+}
+/* 表单组样式 */
+.form-group {
+    margin-bottom: 10px; /* 控制组件之间的空间 */
+    display: block; /* 使得每个form-group在新行显示 */
+    width: 100%; /* 使得form-group的宽度与modal-content一致 */
+}
+
+/* 标签样式 */
+.form-group label {
+    display: block; /* 使得标签在新行显示 */
+    margin-bottom: 5px; /* 控制标签与输入框之间的空间 */
+}
+
+/* 所有输入框宽度一致并且边界对齐 */
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group select {
+    width: 100%; /* 输入框宽度设置为100%，以填满容器 */
+    height: 30%;
+    margin-bottom: 5px; /* 控制与下一个元素的距离 */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* border和padding包含在宽度内 */
+}
+
+/* 提交和重置按钮样式 */
+.form-group input[type="submit"],
+.form-group input[type="reset"] {
+    padding: 10px 20px;
+    margin: 5px 0; /* 控制与其他元素的距离 */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* 当窗口大小变化时，表单内容自适应 */
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+        padding: 10px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="date"],
+    .form-group input[type="time"],
+    .form-group select {
+        width: calc(100% - 20px); /* 适应屏幕宽度 */
+    }
+}
+
+#submit{
+    padding: 10px;
+    background-color: gold;
+    margin-top: 10px;
+}
+
+#clear{
+    padding: 10px;
+    background-color: rgba(255, 0, 59, 0.79);
+    margin-top: 10px;
+}
+#edit{
+    padding: 10px;
+    background-color: lawngreen;
+    margin-top: 10px;
+    font-size:20px;
+}
+
+#delete{
+    padding: 10px;
+    background-color: red;
+    margin-top: 10px;
+    font-size:20px;
+}
